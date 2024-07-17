@@ -2,9 +2,9 @@
  - Component nav (được gọi ở component userListings) nhận prop deleteUserChecked: chứa 2 button delete và add employee
       -  khi ta nhấn vào button add employee thì sẽ chuyển hướng sang trang addemployee nhờ sử dụng router link. Ở component add employee chúng ta sử dụng usesate để set thông tin của employee mới. Component adduserpage nhận vào một prop addUserSubmit nhận dữ liệu là một new employee trong function submitForm. function submitForm được gọi trong sự kiện onsubmit ở form điền thông tin của employee. Ở component main sẽ có một function adduser sử dụng phương thức post để add employee, function adduser sẽ được gọi thông qua  prop addUserSubmit trong component add employee.
       -    khi ta nhấn vào button delete: sự kiện onclick được kích hoạt và gọi funtion deleteUserChecked
-- component userlistings (render tất cả employee, được gọi trong component Homepage)
-        -  sử dụng usesate để set dữ liệu
-        -  sử dụng useeffect để lấy dữ liệu từ api
+- component userlistings (render tất cả employee, được gọi trong component Homepage):
+       +  sử dụng usesate để set dữ liệu
+   +sử dụng useeffect để lấy dữ liệu từ api
         -  function deleteUser xóa dữ liệu qua id nhận vào bằng phương thức delete
         -   funciton hanleCheckboxChange để lưu id của employee đã được chọn
         -  function deleteUserChecked xóa các employee được chọn bằng cách map dữ liệu từ checkedUser để lấy id đã được lưu ở function hanleCheckboxChange
